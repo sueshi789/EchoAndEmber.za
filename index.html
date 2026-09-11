@@ -295,10 +295,9 @@
     display:flex; gap:12px; align-items:center;
     padding:12px 0; border-bottom:1px solid var(--line);
   }
-  .drawer-item .emoji{ font-size:1.6rem; width:40px; text-align:center; }
   .drawer-item .info{ flex:1; }
-  .drawer-item .info strong{ font-size:0.9rem; }
-  .drawer-item .info span{ display:block; font-size:0.78rem; color:rgba(36,31,22,0.55); }
+  .drawer-item .info strong{ font-size:0.95rem; display:block; color:var(--ink); }
+  .drawer-item .info span{ display:block; font-family:'Space Mono', monospace; font-size:0.82rem; color:var(--bronze); margin-top:2px; }
   .qty-controls{ display:flex; align-items:center; gap:8px; }
   .qty-controls button{
     width:24px; height:24px; border-radius:50%;
@@ -485,10 +484,9 @@
       total += p.price * qty;
       return `
         <div class="drawer-item">
-          <div class="emoji">${p.emoji}</div>
           <div class="info">
             <strong>${p.name}</strong>
-            <span>R${p.price} each</span>
+            <span>R${p.price}</span>
           </div>
           <div class="qty-controls">
             <button data-action="dec" data-id="${id}" aria-label="Decrease quantity">-</button>
